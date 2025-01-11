@@ -22,9 +22,10 @@
 
         "baseUrl": ".",
         "paths": {
+            "icons/*": ["node_modules/@vertisanpro/react-icons/*"],
             "@/*": ["./src/*"]
         }
     },
-    "include": ["src"],
+    "include": ["src", "src/components/resonance/.tsx"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

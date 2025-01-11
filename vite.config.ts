@@ -4,12 +4,12 @@ import { defineConfig } from 'vite';
 
 const host = process.env.TAURI_DEV_HOST;
 
-// https://vitejs.dev/config/
 export default defineConfig(async () => ({
     plugins: [react()],
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
+            icons: path.resolve(__dirname, './node_modules/@vertisanpro/react-icons'),
         },
     },
 

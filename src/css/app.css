@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+    }
+}
+
+#root {
+    @apply min-h-screen w-full bg-zinc-900 font-light text-zinc-200 select-none font-[Geist];
+}
