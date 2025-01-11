@@ -37,7 +37,7 @@ const Avatar = ({ user, collapsed }: AvatarProps) => {
             <PopoverContent
                 side='top'
                 align='start'
-                className='!bg-zinc-800 !w-[18rem] flex flex-col p-0 overflow-hidden'
+                className='!bg-zinc-800 !w-[14vw] !lg:w-[6vw] !2xl:w-[2vw] flex flex-col p-0 overflow-hidden'
                 sideOffset={10}
             >
                 <div

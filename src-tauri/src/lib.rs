@@ -1,4 +1,4 @@
-use commands::{calculate_average_color};
+use commands::calculate_average_color;
 use tauri::Manager;
 
 #[macro_use]

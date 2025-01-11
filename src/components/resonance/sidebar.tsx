@@ -17,7 +17,10 @@ const Sidebar = ({ user }: SidebarProps) => {
     // Not sure how well performant this is
     useEffect(() => {
         const handleResize = () => {
-            setMd(!window.matchMedia('(min-width: 768px)').matches);
+            const newMd = window.innerWidth <= 768;
+            console.log(newMd);
+            setMd(newMd);
+            newMd && setCollpased(true);
         };
 
         window.addEventListener('resize', handleResize);
@@ -28,7 +31,9 @@ const Sidebar = ({ user }: SidebarProps) => {
         <aside
             className={cn(
                 'h-full border-r border-white/15 flex flex-col transition-all duration-200',
-                collapsed ? 'w-[16%] lg:w-[8%] xl:w-[4%]' : 'w-[25%] lg:w-[20%] xl:w-[15%]',
+                collapsed && !md
+                    ? 'w-[9%] md:w-[12%] lg:w-[10%] xl:w-[8%] 2xl:w-[6%] 3xl:w-[4%]'
+                    : 'w-[25%] md:w-[18%] lg:w-[16%] xl:w-[14%] 2xl:w-[12%]',
             )}
         >
             {!md && (
