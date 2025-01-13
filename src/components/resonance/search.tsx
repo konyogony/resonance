@@ -76,7 +76,7 @@ const Search = ({ className }: SearchProps) => {
     return (
         <div
             className={cn(
-                'flex w-3/4 md:w-1/2 lg:w-1/4 xl:w-1/5 flex-row gap-2 items-center rounded-lg border transition-all  px-4 py-2',
+                'flex w-3/4 md:w-3/4 lg:w-1/2 xl:w-1/3 flex-row gap-2 hover:bg-zinc-700/50 items-center rounded-xl border transition-all  px-4 py-2',
                 isFocused ? 'border-white/15 bg-zinc-700/50' : 'border-white/5 bg-zinc-800',
                 className,
             )}

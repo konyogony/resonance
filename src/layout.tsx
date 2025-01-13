@@ -1,5 +1,7 @@
+import CurrentlyPlaying from '@/components/resonance/currentlyPlaying';
 import Navbar from '@/components/resonance/navbar';
 import Sidebar from '@/components/resonance/sidebar';
+import Toaster from '@/components/resonance/toaster';
 import { User } from '@/types';
 import { invoke } from '@tauri-apps/api/core';
 import { useCallback, useEffect, useState } from 'react';
@@ -30,14 +32,23 @@ const Layout = () => {
     }, []);
 
     return (
-        <div className='w-full h-screen flex flex-col'>
-            <Navbar />
-            <div className='flex flex-row h-full w-full'>
+        <div className='w-full h-screen flex flex-col relative'>
+            <div className='w-full h-full flex flex-row'>
                 <Sidebar user={user} />
-                <div className='p-4 w-full '>
+                <div className='w-full flex flex-col'>
+                    <Navbar />
                     <Outlet />
                 </div>
             </div>
+            <CurrentlyPlaying
+                track={{
+                    title: 'Tejano Blue',
+                    author: 'Cigarettes After Sex',
+                    albumImg: 'https://f4.bcbits.com/img/a3503054271_65',
+                    duration: 234,
+                }}
+            />
+            <Toaster />
         </div>
     );
 };

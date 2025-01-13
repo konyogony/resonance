@@ -1,3 +1,9 @@
+import { Link } from 'react-router';
+
 export const Page = () => {
-    return <div>Page</div>;
+    return (
+        <div>
+            <Link to={'/login'}>a </Link>
+        </div>
+    );
 };
