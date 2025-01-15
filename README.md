@@ -1,3 +1,1 @@
-# Resonance app
-
-Something big soon... _or not_
+cancelled project due to legal requirements :/
